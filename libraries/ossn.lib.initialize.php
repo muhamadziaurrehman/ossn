@@ -193,20 +193,7 @@ function ossn_index_pagehandler($index) {
  * @return array
  */
 function ossn_pow_lnk_args() {
-		$pw  = base64_decode(OSSN_POW);
-		$pow = ossn_string_decrypt($pw, 'ossn');
-		$pow = trim($pow);
-
-		$lnk = base64_decode(OSSN_LNK);
-		$lnk = ossn_string_decrypt($lnk, 'ossn');
-		$lnk = trim($lnk);
-
-		return array(
-				'name'     => $pow,
-				'text'     => ossn_print($pow),
-				'href'     => $lnk,
-				'priority' => 1000,
-		);
+		return array();
 }
 /**
  * Loads system plugins before we load components.

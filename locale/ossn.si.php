@@ -60,7 +60,7 @@ $si = array(
     'admin:help' => 'උදව්',
     'admin:support' => 'සහයෝගය',
     
-    'ossn:update:check:error' => 'දෝෂ',
+    'update:check:error' => 'දෝෂ',
     
     'upload' => 'උඩුගත',
     'save' => 'සුරකින්න',

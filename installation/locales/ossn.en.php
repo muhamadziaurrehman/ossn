@@ -16,7 +16,7 @@ $englsih = array(
 	'ossn:installation' => 'Installation',
 	'ossn:check' => 'Validate',
 	'ossn:installed' => 'Installed',
-	'ossn:installed:message' => 'Open Source Social Network has been installed.',
+	'ossn:installed:message' => 'Social Network has been installed successfully.',
     'ossn:prerequisites' => 'Installation prerequisites',
     'ossn:settings' => 'Server Settings',
     'ossn:dbsettings' => 'Database',
@@ -76,3 +76,4 @@ $englsih = array(
 );
 
 ossn_installation_register_languages($englsih);
+`

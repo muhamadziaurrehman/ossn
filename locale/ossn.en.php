@@ -60,7 +60,7 @@ $en = array(
     'admin:help' => 'Help',
     'admin:support' => 'Support',
     
-    'ossn:update:check:error' => 'Error',
+    'update:check:error' => 'Error',
     
     'upload' => 'Upload',
     'save' => 'Save',
