@@ -10,23 +10,48 @@
  */
 $error = input('error');
 ?>
-<div class="row">
-       <div class="col-lg-6 col-center ossn-page-contents">
-    <?php if ($error == 1) { ?>
-        <div class="alert alert-danger">
-            <strong><?php echo ossn_print('login:error'); ?></strong><br/>
-            <p><?php echo ossn_print('login:error:sub'); ?></p>
+<div class="modern-login-container">
+    <div class="login-card">
+        <div class="login-card-inner">
+            <?php if ($error == 1) { ?>
+                <div class="modern-alert modern-alert-error">
+                    <div class="alert-icon">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="alert-content">
+                        <strong><?php echo ossn_print('login:error'); ?></strong>
+                        <p><?php echo ossn_print('login:error:sub'); ?></p>
+                    </div>
+                </div>
+            <?php } ?>       
+            
+            <?php 
+                $contents = ossn_view_form('login2', array(
+                        'id' => 'ossn-modern-login',
+                        'action' => ossn_site_url('action/user/login'),
+                        'class' => 'modern-login-form-wrapper'
+                ));
+                echo $contents;
+            ?>
+            
+            <div class="login-footer">
+                <div class="social-login-divider">
+                    <span>or</span>
+                </div>
+                <p class="signup-prompt">
+                    Don't have an account? 
+                    <a href="<?php echo ossn_site_url(); ?>" class="signup-link">Sign up here</a>
+                </p>
+            </div>
         </div>
-    	<?php } ?>       
-    	<?php 
-			$contents = ossn_view_form('login2', array(
-            		'id' => 'ossn-login',
-           			'action' => ossn_site_url('action/user/login'),
-        	));
-			echo ossn_plugin_view('widget/view', array(
-						'title' => ossn_print('site:login'),
-						'contents' => $contents,
-			));
-			?>	       			
-       </div>     
+    </div>
+    
+    <div class="login-background">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
 </div>	

@@ -36,7 +36,13 @@ if (isset($params['contents'])) {
     </script>
 </head>
 
-<body>
+<body<?php 
+$current_url = ossn_site_url(ossn_current_url(), false, true);
+$login_url = ossn_site_url('login');
+if(strpos($current_url, $login_url) !== false) {
+    echo ' class="ossn-login-page"';
+}
+?>>
 	<div class="ossn-page-loading-annimation">
     		<div class="ossn-page-loading-annimation-inner">
             	<div class="ossn-loading"></div>
