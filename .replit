@@ -1,4 +1,4 @@
-modules = ["php-8.2", "web"]
+modules = ["php-8.2", "web", "postgresql-16"]
 run = "php run"
 
 [nix]
@@ -18,3 +18,7 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "php -S 0.0.0.0:5000 -t ."
+
+[[ports]]
+localPort = 5000
+externalPort = 80
